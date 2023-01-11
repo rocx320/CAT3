@@ -1,0 +1,14 @@
+<div class="addDiv d-flex flex-column" ng-controller="addCtrl">
+    <h2 class="text-uppercase text-light">Add Form</h2>
+    <div class="addForm">
+        <form ng-submit="addEntry()" class="d-flex flex-column " style="gap: 10px">
+            <input type="text" name="id" id="id" ng-model="emp_id" placeholder="Enter ID">
+            <input type="text" name="name" id="name" ng-model="emp_name" placeholder="Enter Name">
+            <input type="text" name="desig" id="desig" ng-model="emp_desig" placeholder="Enter Designation">
+            <input type="text" name="dept" id="dept" ng-model="emp_dept" placeholder="Enter Department">
+            <input type="text" name="salary" id="salary" ng-model="emp_salary" placeholder="Enter Salary">
+            <input type="text" name="location" id="location" ng-model="emp_location" placeholder="Enter Location">
+            <button type="submit" class="btn btn-outline-light">ADD</button>
+        </form>
+    </div>
+</div>

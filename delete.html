@@ -1,0 +1,33 @@
+<div ng-controller="deleteCtrl">
+    <div class="table-cont">
+        <table class="table-dark table-bordered w-100 text-center">
+            <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Location</th>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in data | filter: test">
+                <td>{{x.emp_id}}</td>
+                <td>{{x.emp_name}}</td>
+                <td>{{x.emp_desig}}</td>
+                <td>{{x.emp_dept}}</td>
+                <td>{{x.emp_salary}}</td>
+                <td>{{x.emp_location}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="deleteCont text-center mt-4">
+        <h3 class="text-light">DELETE</h3>
+        <form ng-submit="delete()" class="d-flex flex-column" style="gap: 10px">
+            <select name="selId" id="selId" ng-options="x.emp_id for x in data" ng-model="emp_id">
+                <option value="#" selected>Choose ID</option>
+            </select>
+            <button type="submit" class="btn btn-outline-light mt-4">Delete</button>
+        </form>
+    </div>
+</div>
